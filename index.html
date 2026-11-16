@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>绘锦 HUIJIN｜北京高端住宅与商业物业经纪</title>
+<meta name="description" content="北京绘锦房地产经纪有限公司，专注高端住宅、城市公寓与商业物业的全周期经纪服务。以稀缺地段、匠心建筑与专业顾问，为每一种生活方式找到恰到好处的归宿。">
+<meta name="theme-color" content="#0E0A09">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css?v=2">
+<link rel="stylesheet" href="assets/css/sections.css?v=2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23B01B2E'/%3E%3Cpath d='M18 34 32 21l14 13v14H18z' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linejoin='round'/%3E%3Cpath d='M28 48V36h8v12' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>
+  document.documentElement.classList.add('js');
+  try { if (sessionStorage.getItem('hj-veil') === '1') { document.documentElement.classList.add('veil-in'); sessionStorage.removeItem('hj-veil'); } } catch (e) {}
+  setTimeout(function(){ document.documentElement.classList.add('is-loaded'); }, 2800);
+</script>
+</head>
+<body>
+
+<!-- ══════════ 加载动效 ══════════ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-mark">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 34 32 21l14 13v14H18z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M28 48V36h8v12" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="loader-word">绘锦 · HUIJIN</div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+
+<!-- ══════════ SVG 图标库 ══════════ -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M6 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3M12 10V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3ZM6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-area" viewBox="0 0 24 24"><path d="M4 8V4h4M20 16v4h-4M20 8V4h-4M4 16v4h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 15l6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 16v-3l2-5h14l2 5v3M3 16h18M5 16v2M19 16v2M6.5 12h11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5 9 8l-2 2a12 12 0 0 0 7 7l2-2 4.5 2.5-1.2 3A2 2 0 0 1 17 22C9.8 21.4 2.6 14.2 2 7a2 2 0 0 1 1.5-2.3l3-1.2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m4.5 8 7.5 5.5L19.5 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.9 6.3.7-4.7 4.4 1.3 6.3L12 17l-5.6 3.3L7.7 14 3 9.6l6.3-.7L12 3Z" fill="currentColor"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M9.5 5C5.9 6.4 4 9.2 4 13.3V19h6.4v-6.2H7.2c0-2.4.9-4 2.9-4.9L9.5 5Zm10 0C15.9 6.4 14 9.2 14 13.3V19h6.4v-6.2h-3.2c0-2.4.9-4 2.9-4.9L19.5 5Z" fill="currentColor"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wechat" viewBox="0 0 24 24"><path d="M9.3 4C5.3 4 2 6.7 2 10c0 1.9 1 3.6 2.7 4.7L4 17l2.6-1.3c.9.2 1.8.3 2.7.3h.6a5.6 5.6 0 0 1-.2-1.5c0-3.3 3.1-5.9 7-5.9h.5C16.5 6 13.3 4 9.3 4Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M22 14.5c0-2.7-2.6-4.8-5.7-4.8s-5.7 2.1-5.7 4.8 2.6 4.8 5.7 4.8c.7 0 1.4-.1 2-.3l2.2 1.1-.5-1.9c1.2-.9 2-2.2 2-3.7Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="7.4" cy="8.6" r="1" fill="currentColor"/><circle cx="11.4" cy="8.6" r="1" fill="currentColor"/><circle cx="14.6" cy="13.8" r=".9" fill="currentColor"/><circle cx="18" cy="13.8" r=".9" fill="currentColor"/></symbol>
+  <symbol id="i-weibo" viewBox="0 0 24 24"><ellipse cx="10" cy="15" rx="8" ry="5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="10" cy="15" r="1.6" fill="currentColor"/><path d="M15 3.6c3 0 5.4 2.4 5.4 5.4M14.8 6.4c1.5 0 2.7 1.2 2.7 2.7M16.6 12.4c1.6.4 2.8 1.5 3.4 2.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-xhs" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M7.5 9v6M7.5 9h2.7a2 2 0 0 1 0 4H7.5M13 15V9M17 9v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2c.7 5.2 4.1 8.6 10 10-5.9 1.4-9.3 4.8-10 10-.7-5.2-4.1-8.6-10-10 5.9-1.4 9.3-4.8 10-10Z" fill="currentColor"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ══════════ 顶部导航 ══════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-shell">
+    <a class="brand" href="#home" aria-label="绘锦地产 首页">
+      <span class="brand-mark">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 34 32 21l14 13v14H18z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M28 48V36h8v12" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-type">
+        <strong>绘锦</strong>
+        <em>HUIJIN ESTATE</em>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="打开导航菜单" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="主导航">
+      <a href="#home" class="is-active"><span>首页</span></a>
+      <a href="about.html"><span>关于我们</span></a>
+      <a href="#spaces"><span>空间赏析</span></a>
+      <a href="#properties"><span>在售房源</span></a>
+      <a href="#cities"><span>服务城市</span></a>
+      <a href="#testimonials"><span>客户评价</span></a>
+      <a href="#blog"><span>房产资讯</span></a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:+861088886688">
+        <svg class="ico"><use href="#i-phone"/></svg>
+        <span>010-8888 6688</span>
+      </a>
+      <button class="btn btn--sm btn--crimson" data-open-booking data-magnetic>
+        <span>预约看房</span>
+        <svg class="ico"><use href="#i-arrow-up"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ══════════ 首屏 ══════════ -->
+<section class="hero" id="home">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide is-active">
+      <img src="assets/img/hero-villa.webp" alt="黄昏中的现代山景别墅" fetchpriority="high">
+    </div>
+    <div class="hero-slide">
+      <img src="assets/img/hero-2.webp" alt="山坡上的清水混凝土别墅与无边泳池" loading="lazy">
+    </div>
+    <div class="hero-slide">
+      <img src="assets/img/hero-3.webp" alt="湖畔现代别墅的黄昏倒影" loading="lazy">
+    </div>
+  </div>
+  <div class="hero-veil"></div>
+
+  <div class="hero-inner container">
+    <div class="hero-main">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow-line"></span>为当代生活而设计的家</p>
+      <h1 class="hero-title">
+        <span class="line"><span>北京绘锦房地产</span></span>
+        <span class="line"><span>经纪有限公司</span></span>
+      </h1>
+      <p class="hero-text">甄选兼具质感与奢华的住宅，以建筑学视角与全周期服务，<br class="pc-only">为你匹配真正契合生活方式的家。</p>
+
+      <div class="hero-slidercard" id="heroCard">
+        <div class="hero-thumb">
+          <img id="heroThumb" src="assets/img/space-living.webp" alt="当前房源室内预览">
+        </div>
+        <div class="hero-slidercard-copy" id="heroCardCopy">
+          <strong id="heroCardTitle">河石庄园 · 山景别墅</strong>
+          <span id="heroCardMeta">北京 · 朝阳区 · 8 室 4 卫</span>
+        </div>
+        <div class="hero-card-nav">
+          <button class="hero-card-btn" id="heroPrev" aria-label="上一张首屏图片">
+            <svg class="ico"><use href="#i-chev-l"/></svg>
+          </button>
+          <span class="hero-card-sep" aria-hidden="true"></span>
+          <button class="hero-card-btn" id="heroNext" aria-label="下一张首屏图片">
+            <svg class="ico"><use href="#i-chev-r"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <a class="hero-round" href="#properties" aria-label="浏览在售房源">
+      <svg class="ico"><use href="#i-arrow-up"/></svg>
+    </a>
+
+    <div class="hero-social" aria-label="社交媒体">
+      <a href="#contact" aria-label="微信"><svg class="ico"><use href="#i-wechat"/></svg></a>
+      <a href="#contact" aria-label="微博"><svg class="ico"><use href="#i-weibo"/></svg></a>
+      <a href="#contact" aria-label="小红书"><svg class="ico"><use href="#i-xhs"/></svg></a>
+      <a href="#contact" aria-label="Instagram"><svg class="ico"><use href="#i-insta"/></svg></a>
+    </div>
+
+    <div class="hero-foot">
+      <div class="hero-contact">
+        <p><span>我们在</span>北京市朝阳区亮马桥路 88 号</p>
+        <p><span>邮箱</span>service@huijin-estate.com</p>
+      </div>
+      <div class="hero-dots" id="heroDots" role="tablist" aria-label="首屏图片切换">
+        <button class="hero-dot is-active" role="tab" aria-selected="true" aria-label="第 1 张首屏图片"></button>
+        <button class="hero-dot" role="tab" aria-selected="false" aria-label="第 2 张首屏图片"></button>
+        <button class="hero-dot" role="tab" aria-selected="false" aria-label="第 3 张首屏图片"></button>
+      </div>
+      <div class="hero-stat">
+        <strong><span data-count="895">0</span><sup>+</sup></strong>
+        <span>精选房源</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 关于我们 ══════════ -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-head about-head">
+      <p class="eyebrow" data-reveal>为什么选择我们</p>
+      <h2 class="display" data-reveal data-delay="80">
+        优雅生活，<br>与经典人居<span class="accent">无缝相融</span>。
+      </h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-visual" data-reveal data-delay="120">
+        <figure class="about-img" data-parallax="0.05">
+          <img src="assets/img/about-stair.webp" alt="现代别墅中庭的雕塑感楼梯与琥珀色花器" loading="lazy">
+        </figure>
+
+        <div class="glass-card about-glass" data-tilt>
+          <span class="about-glass-icon"><svg class="ico"><use href="#i-spark"/></svg></span>
+          <h3>无缝智能互联</h3>
+          <p>从灯光、温控到安防，全屋系统一触即达，让科技隐于日常。</p>
+          <a class="link-arrow" href="#spaces">了解全屋系统 <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <div class="badge-orbit" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs><path id="badgePath" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs>
+            <text><textPath href="#badgePath" startOffset="0">TRUSTED SINCE 2014 · HUIJIN ESTATE · </textPath></text>
+          </svg>
+          <span class="badge-core"><svg class="ico"><use href="#i-house"/></svg></span>
+        </div>
+      </div>
+
+      <div class="about-body">
+        <p class="about-lead" data-reveal>自 2014 年起，绘锦只做一件事：把真正值得居住的空间，交到真正懂它的人手中。我们以建筑学视角审视每一处房源，用数据与审美共同判断价值。</p>
+
+        <div class="about-collage">
+          <figure class="collage-item collage-item--tall" data-reveal data-delay="60">
+            <img src="assets/img/collage-living.webp" alt="明亮通透的现代客厅" loading="lazy">
+            <figcaption>自然采光</figcaption>
+          </figure>
+          <figure class="collage-item" data-reveal data-delay="140">
+            <img src="assets/img/collage-bed.webp" alt="温润质感的卧室空间" loading="lazy">
+            <figcaption>休憩尺度</figcaption>
+          </figure>
+          <figure class="collage-item" data-reveal data-delay="220">
+            <img src="assets/img/collage-empty.webp" alt="阳光洒落的留白房间" loading="lazy">
+            <figcaption>留白可能</figcaption>
+          </figure>
+        </div>
+
+        <div class="about-foot" data-reveal>
+          <p>从看房、议价到交付与入住，一位专属顾问，贯穿始终。</p>
+          <a class="btn btn--crimson" href="#spaces" data-magnetic>
+            <span>探索品牌概览</span>
+            <svg class="ico"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 空间赏析 ══════════ -->
+<section class="section spaces" id="spaces">
+  <div class="container">
+    <div class="spaces-head">
+      <div>
+        <p class="eyebrow" data-reveal>空间赏析</p>
+        <h2 class="display" data-reveal data-delay="80">每一处空间，<br>都为生活留有余地。</h2>
+      </div>
+      <p class="spaces-note" data-reveal data-delay="160">我们相信，好的住宅不靠堆砌，而靠分寸。以下五个空间，构成河石庄园最日常的一天。</p>
+    </div>
+
+    <div class="spaces-list">
+      <article class="space-row" data-reveal>
+        <div class="space-copy">
+          <span class="space-index">01</span>
+          <h3>客厅</h3>
+          <p>6.2 米挑高与整面落地窗，让城市天际线成为日常背景。亚麻沙发、胡桃木与黄铜细节，在光影之间沉淀出安静的秩序感。</p>
+          <ul class="space-meta">
+            <li><svg class="ico"><use href="#i-area"/></svg><span><b>2500</b> 平方英尺</span></li>
+            <li><svg class="ico"><use href="#i-bed"/></svg><span><b>8</b> 间卧室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span><b>7</b> 间卫浴</span></li>
+          </ul>
+        </div>
+        <figure class="space-media" data-cursor="view">
+          <img src="assets/img/space-living.webp" alt="现代客厅，炭灰沙发与芥末黄靠垫" loading="lazy">
+          <span class="media-tag">Living Room</span>
+        </figure>
+      </article>
+
+      <article class="space-row" data-reveal>
+        <div class="space-copy">
+          <span class="space-index">02</span>
+          <h3>餐厅</h3>
+          <p>可容纳十人的大理石长桌，搭配手工吹制吊灯。无论是家庭晚餐还是朋友聚会，这里总能自然成为全屋的中心。</p>
+          <ul class="space-meta">
+            <li><svg class="ico"><use href="#i-area"/></svg><span><b>2500</b> 平方英尺</span></li>
+            <li><svg class="ico"><use href="#i-bed"/></svg><span><b>8</b> 间卧室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span><b>7</b> 间卫浴</span></li>
+          </ul>
+        </div>
+        <figure class="space-media" data-cursor="view">
+          <img src="assets/img/space-dining.webp" alt="奢华餐厅，大理石长桌与金色吊灯" loading="lazy">
+          <span class="media-tag">Dining Room</span>
+        </figure>
+      </article>
+
+      <article class="space-row" data-reveal>
+        <div class="space-copy">
+          <span class="space-index">03</span>
+          <h3>厨房</h3>
+          <p>深色木饰面与整块岩板岛台构成利落的操作动线，嵌入式家电与隐藏式收纳，让烹饪本身也成为一种享受。</p>
+          <ul class="space-meta">
+            <li><svg class="ico"><use href="#i-area"/></svg><span><b>2500</b> 平方英尺</span></li>
+            <li><svg class="ico"><use href="#i-bed"/></svg><span><b>8</b> 间卧室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span><b>7</b> 间卫浴</span></li>
+          </ul>
+        </div>
+        <figure class="space-media" data-cursor="view">
+          <img src="assets/img/space-kitchen.webp" alt="深色木饰面厨房与岩板岛台" loading="lazy">
+          <span class="media-tag">Kitchen</span>
+        </figure>
+      </article>
+
+      <article class="space-row" data-reveal>
+        <div class="space-copy">
+          <span class="space-index">04</span>
+          <h3>儿童游乐区</h3>
+          <p>以柔和的拱形与圆角构成安全的探索空间，天然材质与可成长式布局，为孩子留出自由想象的一角。</p>
+          <ul class="space-meta">
+            <li><svg class="ico"><use href="#i-area"/></svg><span><b>2500</b> 平方英尺</span></li>
+            <li><svg class="ico"><use href="#i-bed"/></svg><span><b>8</b> 间卧室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span><b>7</b> 间卫浴</span></li>
+          </ul>
+        </div>
+        <figure class="space-media" data-cursor="view">
+          <img src="assets/img/space-play.webp" alt="明亮的高级儿童游乐空间" loading="lazy">
+          <span class="media-tag">Play Area</span>
+        </figure>
+      </article>
+
+      <article class="space-row" data-reveal>
+        <div class="space-copy">
+          <span class="space-index">05</span>
+          <h3>泳池</h3>
+          <p>无边泳池沿建筑轮廓展开，黄昏时分水面映出暖光。私密庭院与热带植栽，把度假感留在每天的归家路上。</p>
+          <ul class="space-meta">
+            <li><svg class="ico"><use href="#i-area"/></svg><span><b>2500</b> 平方英尺</span></li>
+            <li><svg class="ico"><use href="#i-bed"/></svg><span><b>8</b> 间卧室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span><b>7</b> 间卫浴</span></li>
+          </ul>
+        </div>
+        <figure class="space-media" data-cursor="view">
+          <img src="assets/img/space-pool.webp" alt="黄昏中的无边泳池与现代别墅" loading="lazy">
+          <span class="media-tag">Swimming Pool</span>
+        </figure>
+      </article>
+    </div>
+
+    <div class="spaces-cta" data-reveal>
+      <button class="btn btn--lg btn--crimson" data-open-booking data-magnetic>
+        <span>预约到访</span>
+        <svg class="ico"><use href="#i-arrow-up"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 服务城市 ══════════ -->
+<section class="section cities" id="cities">
+  <div class="container">
+    <div class="cities-head">
+      <div>
+        <p class="eyebrow" data-reveal>探索城市</p>
+        <h2 class="display" data-reveal data-delay="80">发现值得安家的城市</h2>
+        <p class="cities-note" data-reveal data-delay="140">从东海岸的静谧社区，到西海岸的阳光海岸线，我们在全球地标城市为你预留位置。</p>
+      </div>
+      <div class="slider-nav" data-reveal data-delay="200">
+        <button class="slider-btn" id="cityPrev" aria-label="上一个城市">
+          <svg class="ico"><use href="#i-chev-l"/></svg>
+        </button>
+        <button class="slider-btn" id="cityNext" aria-label="下一个城市">
+          <svg class="ico"><use href="#i-chev-r"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="city-track" id="cityTrack" tabindex="0" aria-label="城市房源轮播">
+      <article class="city-card" data-cursor="drag">
+        <img src="assets/img/city-1.webp" alt="新泽西黄昏中的现代住宅" loading="lazy">
+        <div class="city-shade"></div>
+        <div class="city-info">
+          <span class="city-count">368 套房源</span>
+          <h3>新泽西 · 纽约</h3>
+          <a href="#properties" class="city-link" aria-label="查看新泽西房源">
+            <svg class="ico"><use href="#i-arrow-up"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="city-card" data-cursor="drag">
+        <img src="assets/img/city-2.webp" alt="开普敦山坡上的当代别墅" loading="lazy">
+        <div class="city-shade"></div>
+        <div class="city-info">
+          <span class="city-count">124 套房源</span>
+          <h3>开普敦 · 南非</h3>
+          <a href="#properties" class="city-link" aria-label="查看开普敦房源">
+            <svg class="ico"><use href="#i-arrow-up"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="city-card" data-cursor="drag">
+        <img src="assets/img/city-3.webp" alt="洛杉矶山间的无边泳池别墅" loading="lazy">
+        <div class="city-shade"></div>
+        <div class="city-info">
+          <span class="city-count">286 套房源</span>
+          <h3>洛杉矶 · 加州</h3>
+          <a href="#properties" class="city-link" aria-label="查看洛杉矶房源">
+            <svg class="ico"><use href="#i-arrow-up"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="city-card" data-cursor="drag">
+        <img src="assets/img/city-4.webp" alt="首尔静谧街区的雅致别墅" loading="lazy">
+        <div class="city-shade"></div>
+        <div class="city-info">
+          <span class="city-count">173 套房源</span>
+          <h3>首尔 · 韩国</h3>
+          <a href="#properties" class="city-link" aria-label="查看首尔房源">
+            <svg class="ico"><use href="#i-arrow-up"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div class="track-meter"><span id="cityMeter"></span></div>
+  </div>
+</section>
+
+<!-- ══════════ 在售房源 ══════════ -->
+<section class="section properties" id="properties">
+  <div class="container">
+    <div class="prop-head">
+      <div>
+        <p class="eyebrow" data-reveal>最新在售</p>
+        <h2 class="display" data-reveal data-delay="80">发现卓越在售房源</h2>
+      </div>
+      <a class="btn btn--outline" href="#blog" data-magnetic data-reveal data-delay="150">
+        <span>浏览更多</span>
+        <svg class="ico"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+
+    <div class="prop-grid">
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/prop-1.webp" alt="海景别墅外观，弧形立面与无边泳池" loading="lazy">
+          <span class="prop-badge">在售</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>海景别墅 S078</h3>
+            <span>现代奢华宅邸</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市朝阳区亮马桥路 88 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>4 室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>3 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>1920 平方英尺</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>售价</span>
+              <strong>¥1,798<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="#contact">查看详情 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-1.webp" alt="销售顾问 沈墨" loading="lazy">
+            <div>
+              <strong>沈墨</strong>
+              <span>销售顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal data-delay="120">
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/prop-2.webp" alt="现代宅邸外观，深色木饰面与暖光" loading="lazy">
+          <span class="prop-badge">在售</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>现代宅邸 S142</h3>
+            <span>城市臻品</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市海淀区万柳书院 12 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>5 室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>4 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>2260 平方英尺</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>售价</span>
+              <strong>¥3,358<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="#contact">查看详情 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-2.webp" alt="销售顾问 苏晚" loading="lazy">
+            <div>
+              <strong>苏晚</strong>
+              <span>销售顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 团队 ══════════ -->
+<section class="section team" id="team">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <p class="eyebrow" data-reveal>认识专家</p>
+      <h2 class="display" data-reveal data-delay="80">幕后专业团队，<br>成就<span class="accent">理想人居</span>。</h2>
+    </div>
+
+    <div class="team-grid">
+      <article class="team-card" data-reveal>
+        <div class="team-photo">
+          <img src="assets/img/team-1.webp" alt="开发总监 沈砚舟" loading="lazy">
+          <a class="team-social" href="#contact" aria-label="联系沈砚舟"><svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          <span class="team-glow"></span>
+        </div>
+        <div class="team-info">
+          <h3>沈砚舟</h3>
+          <span>开发总监</span>
+        </div>
+      </article>
+      <article class="team-card" data-reveal data-delay="90">
+        <div class="team-photo">
+          <img src="assets/img/team-2.webp" alt="房源协调主管 苏婉清" loading="lazy">
+          <a class="team-social" href="#contact" aria-label="联系苏婉清"><svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          <span class="team-glow"></span>
+        </div>
+        <div class="team-info">
+          <h3>苏婉清</h3>
+          <span>房源协调主管</span>
+        </div>
+      </article>
+      <article class="team-card" data-reveal data-delay="180">
+        <div class="team-photo">
+          <img src="assets/img/team-3.webp" alt="租赁顾问 江屿南" loading="lazy">
+          <a class="team-social" href="#contact" aria-label="联系江屿南"><svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          <span class="team-glow"></span>
+        </div>
+        <div class="team-info">
+          <h3>江屿南</h3>
+          <span>租赁顾问</span>
+        </div>
+      </article>
+      <article class="team-card" data-reveal data-delay="270">
+        <div class="team-photo">
+          <img src="assets/img/team-4.webp" alt="房产经理 林知夏" loading="lazy">
+          <a class="team-social" href="#contact" aria-label="联系林知夏"><svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          <span class="team-glow"></span>
+        </div>
+        <div class="team-info">
+          <h3>林知夏</h3>
+          <span>房产经理</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 客户评价 ══════════ -->
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <p class="eyebrow" data-reveal>客户之声</p>
+      <h2 class="display" data-reveal data-delay="80">真实故事，真实满意。</h2>
+    </div>
+
+    <div class="testimonial-shell glass glass--light" data-reveal>
+      <span class="quote-watermark"><svg class="ico"><use href="#i-quote"/></svg></span>
+
+      <div class="testimonial-viewport">
+        <div class="testimonial-track" id="testiTrack">
+          <article class="testimonial">
+            <div class="testi-person">
+              <img src="assets/img/client-1.webp" alt="客户 赵承宇" loading="lazy">
+              <h3>赵承宇</h3>
+              <span>人力资源总监</span>
+              <div class="testi-stars" aria-label="五星好评">
+                <svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg>
+              </div>
+            </div>
+            <div class="testi-copy">
+              <p class="testi-quote">从第一次看房到交房，绘锦团队把每个细节都提前想到。他们不只是卖房，更是在帮我们规划一种生活。</p>
+              <div class="testi-brand">
+                <span class="testi-logo">远见科技</span>
+                <span class="testi-since">合作于 2025</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <div class="testi-person">
+              <img src="assets/img/client-2.webp" alt="客户 周予安" loading="lazy">
+              <h3>周予安</h3>
+              <span>品牌主理人</span>
+              <div class="testi-stars" aria-label="五星好评">
+                <svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg>
+              </div>
+            </div>
+            <div class="testi-copy">
+              <p class="testi-quote">我一个人完成了从选房到按揭的全部流程，顾问的响应速度和专业度让人安心。现在每天回家，都庆幸当初的选择。</p>
+              <div class="testi-brand">
+                <span class="testi-logo">予安设计</span>
+                <span class="testi-since">合作于 2026</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="testi-controls">
+        <div class="testi-dots" id="testiDots" role="tablist" aria-label="评价切换">
+          <button class="dot is-active" role="tab" aria-selected="true" aria-label="第一条评价"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-label="第二条评价"></button>
+        </div>
+        <div class="slider-nav">
+          <button class="slider-btn slider-btn--light" id="testiPrev" aria-label="上一条评价"><svg class="ico"><use href="#i-chev-l"/></svg></button>
+          <button class="slider-btn slider-btn--light" id="testiNext" aria-label="下一条评价"><svg class="ico"><use href="#i-chev-r"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 常见问题 ══════════ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-intro">
+        <p class="eyebrow" data-reveal>常见问题</p>
+        <h2 class="display" data-reveal data-delay="80">你的疑问，<br>逐一解答</h2>
+        <p data-reveal data-delay="140">置业从来不是一件小事。我们把客户最常问的问题整理在这里；如果仍有疑问，专属顾问随时在线。</p>
+        <button class="btn btn--crimson" data-open-booking data-magnetic data-reveal data-delay="200">
+          <span>免费咨询</span>
+          <svg class="ico"><use href="#i-arrow"/></svg>
+        </button>
+
+        <div class="faq-deco" aria-hidden="true">
+          <span class="faq-dots"></span>
+          <svg class="faq-flower" viewBox="0 0 120 120">
+            <g fill="none" stroke="currentColor" stroke-width="1.4">
+              <circle cx="60" cy="60" r="14"/>
+              <path d="M60 46c0-18 8-30 0-38-8 8 0 20 0 38ZM60 74c0 18-8 30 0 38 8-8 0-20 0-38ZM46 60c-18 0-30-8-38 0 8 8 20 0 38 0ZM74 60c18 0 30 8 38 0-8-8-20 0-38 0Z"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="faq-list" data-reveal data-delay="100">
+        <div class="faq-item is-open">
+          <button class="faq-q" aria-expanded="true">
+            <span class="faq-num">01</span>
+            <span class="faq-text">如何开始购房流程？</span>
+            <span class="faq-icon"><svg class="ico"><use href="#i-plus"/></svg></span>
+          </button>
+          <div class="faq-a"><div><p>从需求沟通、资金规划到看房、议价与网签，我们提供一对一全流程陪伴。您只需预约一次面谈，专属顾问会为您梳理完整路径与时间节点。</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-num">02</span>
+            <span class="faq-text">出售房产需要准备哪些材料？</span>
+            <span class="faq-icon"><svg class="ico"><use href="#i-plus"/></svg></span>
+          </button>
+          <div class="faq-a"><div><p>通常需要产权证明、身份证明、婚姻状况证明及物业相关票据。我们会提前给出清单，并协助核验与补齐，避免在交易节点临时补件。</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-num">03</span>
+            <span class="faq-text">租赁申请流程是怎样的？</span>
+            <span class="faq-icon"><svg class="ico"><use href="#i-plus"/></svg></span>
+          </button>
+          <div class="faq-a"><div><p>选定房源后提交申请与资质材料，完成背景与信用审核，签署租赁合同并办理入住交接，全程平均 3–5 个工作日。</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-num">04</span>
+            <span class="faq-text">可以获得按揭贷款方面的协助吗？</span>
+            <span class="faq-icon"><svg class="ico"><use href="#i-plus"/></svg></span>
+          </button>
+          <div class="faq-a"><div><p>可以。我们与多家银行及金融机构保持长期合作，可协助测算额度、比较利率方案并准备申请材料，让资金安排更从容。</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-num">05</span>
+            <span class="faq-text">如何预约看房？</span>
+            <span class="faq-icon"><svg class="ico"><use href="#i-plus"/></svg></span>
+          </button>
+          <div class="faq-a"><div><p>点击页面任意「预约看房」按钮，或直接致电顾问。我们支持工作日、周末及夜间看房，并可安排专车接送。</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 资讯 ══════════ -->
+<section class="section blog" id="blog">
+  <div class="container">
+    <div class="blog-head">
+      <div>
+        <p class="eyebrow" data-reveal>洞察与指南</p>
+        <h2 class="display" data-reveal data-delay="80">探索最新房产趋势。</h2>
+      </div>
+      <a class="link-arrow" href="#blog" data-reveal data-delay="140">查看全部文章 <svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card" data-reveal>
+        <figure class="blog-media" data-cursor="view">
+          <img src="assets/img/blog-1.webp" alt="手持新房钥匙与购房合同" loading="lazy">
+        </figure>
+        <div class="blog-meta"><span>2026.03.12</span><span>置业指南</span></div>
+        <h3>首次置业者的 7 个聪明建议。</h3>
+        <p>从预算测算到产权核验，把第一次买房最容易忽略的细节一次讲清。</p>
+        <a class="blog-link" href="#blog">阅读全文 <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </article>
+
+      <article class="blog-card" data-reveal data-delay="110">
+        <figure class="blog-media" data-cursor="view">
+          <img src="assets/img/blog-2.webp" alt="重新装修后的明亮客厅" loading="lazy">
+        </figure>
+        <div class="blog-meta"><span>2026.02.28</span><span>资产运营</span></div>
+        <h3>出售前，如何提升房产价值？</h3>
+        <p>五个低成本改造与呈现技巧，让你的房源在市场中更快被看见。</p>
+        <a class="blog-link" href="#blog">阅读全文 <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </article>
+
+      <article class="blog-card" data-reveal data-delay="220">
+        <figure class="blog-media" data-cursor="view">
+          <img src="assets/img/blog-3.webp" alt="夕阳下的联排住宅与草坪" loading="lazy">
+        </figure>
+        <div class="blog-meta"><span>2026.02.10</span><span>市场洞察</span></div>
+        <h3>租房还是买房：哪一种更适合你？</h3>
+        <p>用现金流与生活阶段两把尺子，重新衡量居住这件事。</p>
+        <a class="blog-link" href="#blog">阅读全文 <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══════════ 页脚 ══════════ -->
+<footer class="site-footer" id="contact">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-cta" data-reveal>
+      <div class="footer-cta-left">
+        <span class="footer-cta-icon"><svg class="ico"><use href="#i-house"/></svg></span>
+        <div>
+          <h3>需要买卖房屋？</h3>
+          <p>与绘锦顾问聊一聊，获取一份只属于你的置业方案。</p>
+        </div>
+      </div>
+      <button class="btn btn--light" data-open-booking data-magnetic>
+        <span>立即联系</span>
+        <svg class="ico"><use href="#i-arrow-up"/></svg>
+      </button>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="#home" aria-label="绘锦地产 首页">
+          <span class="brand-mark">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 34 32 21l14 13v14H18z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M28 48V36h8v12" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="brand-type"><strong>绘锦</strong><em>HUIJIN ESTATE</em></span>
+        </a>
+        <p class="footer-desc">北京绘锦房地产经纪有限公司，专注高端住宅、城市公寓与商业物业的全周期经纪服务，让每一次居住选择都经得起时间。</p>
+        <ul class="footer-contact">
+          <li><svg class="ico"><use href="#i-phone"/></svg><a href="tel:+861088886688">+86 010-8888 6688</a></li>
+          <li><svg class="ico"><use href="#i-mail"/></svg><a href="mailto:service@huijin-estate.com">service@huijin-estate.com</a></li>
+          <li><svg class="ico"><use href="#i-pin"/></svg><span>北京市朝阳区亮马桥路 88 号 绘锦中心 26 层</span></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#contact" aria-label="微信"><svg class="ico"><use href="#i-wechat"/></svg></a>
+          <a href="#contact" aria-label="微博"><svg class="ico"><use href="#i-weibo"/></svg></a>
+          <a href="#contact" aria-label="小红书"><svg class="ico"><use href="#i-xhs"/></svg></a>
+          <a href="#contact" aria-label="Instagram"><svg class="ico"><use href="#i-insta"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="精选房源">
+        <h4>精选房源</h4>
+        <a href="#properties">独栋别墅</a>
+        <a href="#properties">城市公寓</a>
+        <a href="#properties">商业物业</a>
+        <a href="#properties">庄园宅邸</a>
+        <a href="#properties">海景住宅</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="快速链接">
+        <h4>快速链接</h4>
+        <a href="#about">品牌战略</a>
+        <a href="#spaces">服务管理</a>
+        <a href="#faq">隐私政策</a>
+        <a href="#blog">网站地图</a>
+        <a href="#faq">条款细则</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="支持">
+        <h4>支持</h4>
+        <a href="#faq">帮助中心</a>
+        <a href="#faq">常见问题</a>
+        <a href="#contact">联系我们</a>
+        <a href="#contact">工单支持</a>
+        <a href="#contact">在线顾问</a>
+      </nav>
+
+      <div class="footer-map">
+        <h4>位置</h4>
+        <a class="footer-map-card" href="#contact" aria-label="查看绘锦中心位置">
+          <img src="assets/img/map.webp" alt="绘锦中心周边街区地图" loading="lazy">
+          <span class="map-pin"><span></span></span>
+          <span class="map-label">绘锦中心 · 亮马桥</span>
+        </a>
+        <p class="map-note">地铁 10 号线亮马桥站 B 口步行 6 分钟，访客停车位可提前预留。</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> 北京绘锦房地产经纪有限公司 版权所有</p>
+      <div class="footer-legal">
+        <a href="#faq">隐私政策</a>
+        <a href="#faq">使用条款</a>
+        <a href="#faq">京ICP备20260088号</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-watermark" aria-hidden="true">绘锦 HUIJIN</div>
+</footer>
+
+<!-- ══════════ 预约弹窗 ══════════ -->
+<div class="booking-modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle" aria-hidden="true">
+  <div class="booking-backdrop" data-close-booking></div>
+  <div class="booking-panel glass glass--light">
+    <button class="booking-close" data-close-booking aria-label="关闭预约弹窗"><svg class="ico"><use href="#i-close"/></svg></button>
+    <div class="booking-head">
+      <p class="eyebrow">预约看房</p>
+      <h3 id="bookingTitle">告诉我们你的理想居所</h3>
+      <p>留下联系方式，专属顾问将在 30 分钟内与你联系。</p>
+    </div>
+    <form class="booking-form" id="bookingForm" novalidate>
+      <label class="field">
+        <span>称呼</span>
+        <input type="text" name="name" placeholder="如何称呼你" required autocomplete="name">
+      </label>
+      <label class="field">
+        <span>手机号</span>
+        <input type="tel" name="phone" placeholder="用于顾问与你联系" required autocomplete="tel" inputmode="tel">
+      </label>
+      <label class="field">
+        <span>意向</span>
+        <select name="intent">
+          <option>在售房源看房</option>
+          <option>租赁咨询</option>
+          <option>委托出售</option>
+          <option>资产配置建议</option>
+        </select>
+      </label>
+      <label class="field field--full">
+        <span>补充说明</span>
+        <textarea name="note" rows="3" placeholder="预算、区域、期望到访时间……"></textarea>
+      </label>
+      <div class="booking-actions field--full">
+        <p class="booking-hint">提交即表示同意我们仅将信息用于本次服务联系。</p>
+        <button class="btn btn--crimson" type="submit" data-magnetic>
+          <span>提交预约</span>
+          <svg class="ico"><use href="#i-arrow"/></svg>
+        </button>
+      </div>
+      <p class="booking-success" id="bookingSuccess" role="status">
+        <svg class="ico"><use href="#i-check"/></svg> 预约已收到，顾问会尽快与你联系。
+      </p>
+    </form>
+  </div>
+</div>
+
+<button class="to-top" id="toTop" aria-label="返回顶部">
+  <svg class="ico"><use href="#i-chev-r"/></svg>
+</button>
+
+<!-- ══════════ 页面切换遮罩 ══════════ -->
+<div class="page-veil" aria-hidden="true">
+  <div class="page-veil-inner">
+    <span class="page-veil-mark">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 34 32 21l14 13v14H18z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M28 48V36h8v12" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/></svg>
+    </span>
+    <span class="page-veil-word">绘锦 · HUIJIN</span>
+  </div>
+</div>
+
+<script src="assets/js/main.js?v=2" defer></script>
+</body>
+</html>
