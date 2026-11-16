@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css?v=2">
-<link rel="stylesheet" href="assets/css/sections.css?v=2">
+<link rel="stylesheet" href="assets/css/main.css?v=3">
+<link rel="stylesheet" href="assets/css/sections.css?v=3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23B01B2E'/%3E%3Cpath d='M18 34 32 21l14 13v14H18z' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linejoin='round'/%3E%3Cpath d='M28 48V36h8v12' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linejoin='round'/%3E%3C/svg%3E">
 <script>
   document.documentElement.classList.add('js');
@@ -830,14 +830,79 @@
   <div class="footer-watermark" aria-hidden="true">绘锦 HUIJIN</div>
 </footer>
 
-<!-- ══════════ 预约弹窗 ══════════ -->
+<!-- ══════════ 预约 / 登录弹窗 ══════════ -->
 <div class="booking-modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle" aria-hidden="true">
   <div class="booking-backdrop" data-close-booking></div>
   <div class="booking-panel glass glass--light">
-    <button class="booking-close" data-close-booking aria-label="关闭预约弹窗"><svg class="ico"><use href="#i-close"/></svg></button>
+    <button class="booking-close" data-close-booking aria-label="关闭弹窗"><svg class="ico"><use href="#i-close"/></svg></button>
+
+    <!-- 视图一：登录 / 注册 -->
+    <div class="booking-view is-active" id="bookingAuth">
+      <button class="booking-back" type="button" data-auth-back>
+        <svg class="ico"><use href="#i-chev-l"/></svg>
+        <span>返回预约表单</span>
+      </button>
+      <div class="booking-head">
+        <p class="eyebrow">绘锦会员</p>
+        <h3 id="bookingTitle">登录或注册，开启专属服务</h3>
+        <p>一个账户，统一管理你的看房预约、房源收藏与专属顾问。</p>
+      </div>
+
+      <div class="auth-tabs" role="tablist" aria-label="登录或注册">
+        <button class="auth-tab is-active" type="button" role="tab" aria-selected="true" data-auth-tab="login">登录</button>
+        <button class="auth-tab" type="button" role="tab" aria-selected="false" data-auth-tab="register">注册</button>
+      </div>
+
+      <form class="booking-form auth-form is-active" id="loginForm" novalidate>
+        <label class="field">
+          <span>手机号</span>
+          <input type="tel" name="phone" placeholder="请输入手机号" required autocomplete="tel" inputmode="tel">
+        </label>
+        <label class="field">
+          <span>密码</span>
+          <input type="password" name="password" placeholder="请输入密码" required minlength="6" autocomplete="current-password">
+        </label>
+        <div class="auth-row">
+          <label class="auth-check"><input type="checkbox" name="remember" checked><span>记住我</span></label>
+        </div>
+        <button class="btn btn--crimson auth-submit" type="submit" data-magnetic>
+          <span>登录并继续</span>
+          <svg class="ico"><use href="#i-arrow"/></svg>
+        </button>
+        <p class="auth-note">还没有账户？<button class="auth-link" type="button" data-auth-tab="register">立即注册</button></p>
+      </form>
+
+      <form class="booking-form auth-form" id="registerForm" novalidate>
+        <label class="field">
+          <span>称呼</span>
+          <input type="text" name="name" placeholder="如何称呼你" required autocomplete="name">
+        </label>
+        <label class="field">
+          <span>手机号</span>
+          <input type="tel" name="phone" placeholder="请输入手机号" required autocomplete="tel" inputmode="tel">
+        </label>
+        <label class="field">
+          <span>设置密码</span>
+          <input type="password" name="password" placeholder="至少 6 位字符" required minlength="6" autocomplete="new-password">
+        </label>
+        <label class="field">
+          <span>确认密码</span>
+          <input type="password" name="confirm" placeholder="再次输入密码" required minlength="6" autocomplete="new-password">
+        </label>
+        <label class="auth-check auth-check--full"><input type="checkbox" name="agree" required><span>我已阅读并同意《用户服务协议》与《隐私政策》</span></label>
+        <button class="btn btn--crimson auth-submit" type="submit" data-magnetic>
+          <span>注册并进入</span>
+          <svg class="ico"><use href="#i-arrow"/></svg>
+        </button>
+        <p class="auth-note">已有账户？<button class="auth-link" type="button" data-auth-tab="login">直接登录</button></p>
+      </form>
+    </div>
+
+    <!-- 视图二：预约表单 -->
+    <div class="booking-view" id="bookingFormView" aria-hidden="true">
     <div class="booking-head">
       <p class="eyebrow">预约看房</p>
-      <h3 id="bookingTitle">告诉我们你的理想居所</h3>
+      <h3>告诉我们你的理想居所</h3>
       <p>留下联系方式，专属顾问将在 30 分钟内与你联系。</p>
     </div>
     <form class="booking-form" id="bookingForm" novalidate>
@@ -873,6 +938,7 @@
         <svg class="ico"><use href="#i-check"/></svg> 预约已收到，顾问会尽快与你联系。
       </p>
     </form>
+    </div>
   </div>
 </div>
 
@@ -890,6 +956,6 @@
   </div>
 </div>
 
-<script src="assets/js/main.js?v=2" defer></script>
+<script src="assets/js/main.js?v=3" defer></script>
 </body>
 </html>

@@ -395,19 +395,69 @@
     });
   });
 
-  /* ───────── 预约弹窗 ───────── */
+  /* ───────── 预约 / 登录弹窗 ───────── */
   const modal = $('#bookingModal');
   const form = $('#bookingForm');
   const success = $('#bookingSuccess');
+  const authView = $('#bookingAuth');
+  const formView = $('#bookingFormView');
+  const loginForm = $('#loginForm');
+  const registerForm = $('#registerForm');
   let lastFocused = null;
+
+  const showView = (name) => {
+    if (!authView || !formView) return;
+    const isAuth = name === 'auth';
+    authView.classList.toggle('is-active', isAuth);
+    formView.classList.toggle('is-active', !isAuth);
+    authView.setAttribute('aria-hidden', isAuth ? 'false' : 'true');
+    formView.setAttribute('aria-hidden', isAuth ? 'true' : 'false');
+  };
+
+  const switchAuth = (which, focus = true) => {
+    $$('.auth-tab', modal).forEach((tab) => {
+      const on = tab.dataset.authTab === which;
+      tab.classList.toggle('is-active', on);
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    if (loginForm) loginForm.classList.toggle('is-active', which === 'login');
+    if (registerForm) registerForm.classList.toggle('is-active', which === 'register');
+    if (!focus) return;
+    const pane = which === 'login' ? loginForm : registerForm;
+    const first = pane && pane.querySelector('input');
+    if (first) setTimeout(() => first.focus({ preventScroll: true }), 160);
+  };
+
+  const goHome = () => {
+    const veilEl = $('.page-veil');
+    try { sessionStorage.setItem('hj-veil', '1'); } catch (err) {}
+    if (veilEl) {
+      veilEl.classList.add('is-active');
+      setTimeout(() => { window.location.href = 'index.html'; }, 660);
+    } else {
+      window.location.href = 'index.html';
+    }
+  };
+
+  const redirecting = (f, text) => {
+    const btn = f.querySelector('.auth-submit');
+    if (btn) {
+      btn.setAttribute('disabled', 'disabled');
+      const span = btn.querySelector('span');
+      if (span) span.textContent = text;
+    }
+    goHome();
+  };
 
   const openModal = () => {
     lastFocused = document.activeElement;
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('is-locked');
-    success.classList.remove('is-on');
-    setTimeout(() => { const first = $('input', modal); if (first) first.focus({ preventScroll: true }); }, 260);
+    if (success) success.classList.remove('is-on');
+    showView('auth');
+    switchAuth('login', false);
+    setTimeout(() => { const first = loginForm && loginForm.querySelector('input'); if (first) first.focus({ preventScroll: true }); }, 260);
   };
   const closeModal = () => {
     modal.classList.remove('is-open');
@@ -421,6 +471,59 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
+
+  /* 视图切换：标签页 / 返回预约表单 */
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      const tab = e.target.closest('[data-auth-tab]');
+      if (tab) { switchAuth(tab.dataset.authTab); return; }
+      if (e.target.closest('[data-auth-back]')) {
+        showView('form');
+        const first = formView && formView.querySelector('input');
+        if (first) setTimeout(() => first.focus({ preventScroll: true }), 160);
+      }
+    });
+  }
+
+  /* 登录 */
+  if (loginForm) {
+    const phone = loginForm.querySelector('input[name="phone"]');
+    phone.addEventListener('input', () => phone.setCustomValidity(''));
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!loginForm.checkValidity()) { loginForm.reportValidity(); return; }
+      if (!/^1[3-9]\d{9}$/.test(phone.value.trim())) {
+        phone.setCustomValidity('请输入有效的手机号');
+        phone.reportValidity();
+        return;
+      }
+      redirecting(loginForm, '正在登录…');
+    });
+  }
+
+  /* 注册 */
+  if (registerForm) {
+    const phone = registerForm.querySelector('input[name="phone"]');
+    const pwd = registerForm.querySelector('input[name="password"]');
+    const confirmPwd = registerForm.querySelector('input[name="confirm"]');
+    phone.addEventListener('input', () => phone.setCustomValidity(''));
+    confirmPwd.addEventListener('input', () => confirmPwd.setCustomValidity(''));
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!registerForm.checkValidity()) { registerForm.reportValidity(); return; }
+      if (!/^1[3-9]\d{9}$/.test(phone.value.trim())) {
+        phone.setCustomValidity('请输入有效的手机号');
+        phone.reportValidity();
+        return;
+      }
+      if (pwd.value !== confirmPwd.value) {
+        confirmPwd.setCustomValidity('两次输入的密码不一致');
+        confirmPwd.reportValidity();
+        return;
+      }
+      redirecting(registerForm, '正在注册…');
+    });
+  }
 
   if (form) {
     const phone = form.querySelector('input[name="phone"]');
