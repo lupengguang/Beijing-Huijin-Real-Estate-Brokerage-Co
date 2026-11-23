@@ -466,7 +466,7 @@
     if (lastFocused && lastFocused.focus) lastFocused.focus({ preventScroll: true });
   };
 
-  $$('[data-open-booking]').forEach((btn) => btn.addEventListener('click', openModal));
+  $$('[data-open-booking]').forEach((btn) => btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); }));
   $$('[data-close-booking]').forEach((btn) => btn.addEventListener('click', closeModal));
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
