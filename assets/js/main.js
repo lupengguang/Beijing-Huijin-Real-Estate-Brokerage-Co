@@ -147,6 +147,16 @@
   };
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  /* ───────── 返回上一页 ───────── */
+  $$('[data-back]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (document.referrer && window.history.length > 1) window.history.back();
+      else window.location.href = 'index.html';
+    });
+  });
+
   /* ───────── 移动端菜单 ───────── */
   const navToggle = $('#navToggle');
   const navLinks = $('#navLinks');
