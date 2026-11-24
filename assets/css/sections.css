@@ -750,16 +750,6 @@
 /* ─────────── 详情首屏 ─────────── */
 .about-hero--detail{min-height:70vh;min-height:70svh}
 .about-hero--detail .about-hero-inner{padding-top:clamp(120px,16vh,176px)}
-.detail-hero-ph{
-  position:absolute;inset:0;display:grid;place-items:center;
-  background:
-    radial-gradient(120% 90% at 78% 18%,rgba(201,164,106,.18),transparent 55%),
-    linear-gradient(145deg,#1B1310 0%,#241711 46%,#3A241B 100%);
-}
-.detail-hero-ph span{
-  padding:12px 20px;border:1px dashed rgba(255,255,255,.28);border-radius:999px;
-  font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5);
-}
 .detail-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .detail-tags li{
   padding:7px 14px;border-radius:999px;font-size:11px;letter-spacing:.12em;
@@ -814,15 +804,24 @@
   background:rgba(255,255,255,.55);border:1px solid var(--line-soft);
 }
 .media-card h3{margin-bottom:12px;font-size:12px;font-weight:500;letter-spacing:.16em;color:var(--ink-faint)}
-.media-ph{
-  aspect-ratio:4/3;border-radius:14px;display:grid;place-items:center;
-  border:1px dashed var(--line-strong);
-  background:linear-gradient(150deg,#F5F0E8,#E8E0D4);
-}
-.media-ph span{font-size:11px;letter-spacing:.14em;color:var(--ink-faint)}
-.media-ph img{width:100%;height:100%;object-fit:cover;border-radius:14px}
 .detail-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,1.8vw,22px);margin-top:20px}
-.detail-gallery .media-ph{aspect-ratio:16/10}
+.detail-gallery--three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.gallery-group + .gallery-group{margin-top:clamp(22px,2.6vw,32px)}
+.gallery-group .detail-gallery{margin-top:12px}
+.gallery-title{font-size:12px;font-weight:500;letter-spacing:.16em;color:var(--ink-faint)}
+.detail-figure{
+  margin:0;border-radius:14px;overflow:hidden;
+  background:#F1EBE2;border:1px solid var(--line-soft);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.detail-figure:hover{transform:translateY(-4px);box-shadow:0 24px 40px -30px rgba(50,24,18,.5)}
+.detail-figure img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .9s var(--ease-soft)}
+.detail-figure:hover img{transform:scale(1.035)}
+.detail-figure figcaption{padding:10px 12px;font-size:11.5px;letter-spacing:.08em;color:var(--ink-soft);background:rgba(255,255,255,.74)}
+.detail-figure--plan img{object-fit:contain;background:#fff;padding:8px}
+@media (max-width:760px){
+  .detail-gallery--three{grid-template-columns:1fr 1fr}
+}
 
 @media (max-width:1024px){
   .detail-layout{grid-template-columns:1fr}
