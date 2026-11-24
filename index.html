@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css?v=6">
-<link rel="stylesheet" href="assets/css/sections.css?v=6">
+<link rel="stylesheet" href="assets/css/main.css?v=8">
+<link rel="stylesheet" href="assets/css/sections.css?v=8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23B01B2E'/%3E%3Cpath d='M18 34 32 21l14 13v14H18z' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linejoin='round'/%3E%3Cpath d='M28 48V36h8v12' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linejoin='round'/%3E%3C/svg%3E">
 <script>
   document.documentElement.classList.add('js');
@@ -177,64 +177,50 @@
 </section>
 
 <!-- ══════════ 关于我们 ══════════ -->
-<section class="section about" id="about">
+<section class="section about2" id="about">
   <div class="container">
-    <div class="section-head about-head">
-      <p class="eyebrow" data-reveal>为什么选择我们</p>
-      <h2 class="display" data-reveal data-delay="80">
-        优雅生活，<br>与经典人居<span class="accent">无缝相融</span>。
-      </h2>
-    </div>
+    <div class="about2-grid">
+      <a class="about2-media" href="about.html" data-tilt aria-label="了解绘锦品牌故事">
+        <img src="assets/img/collage-bed.webp" alt="温润质感的卧室空间" loading="lazy">
+        <span class="about2-shine" aria-hidden="true"></span>
+        <span class="about2-play" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 6.4v11.2l9.2-5.6L9 6.4Z" fill="currentColor"/></svg>
+        </span>
+      </a>
 
-    <div class="about-grid">
-      <div class="about-visual" data-reveal data-delay="120">
-        <figure class="about-img" data-parallax="0.05">
-          <img src="assets/img/about-stair.webp" alt="现代别墅中庭的雕塑感楼梯与琥珀色花器" loading="lazy">
-        </figure>
-
-        <div class="glass-card about-glass" data-tilt>
-          <span class="about-glass-icon"><svg class="ico"><use href="#i-spark"/></svg></span>
-          <h3>无缝智能互联</h3>
-          <p>从灯光、温控到安防，全屋系统一触即达，让科技隐于日常。</p>
-          <a class="link-arrow" href="#spaces">了解全屋系统 <svg class="ico"><use href="#i-arrow"/></svg></a>
-        </div>
-
-        <div class="badge-orbit" aria-hidden="true">
-          <svg viewBox="0 0 120 120">
-            <defs><path id="badgePath" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs>
-            <text><textPath href="#badgePath" startOffset="0">TRUSTED SINCE 2014 · HUIJIN ESTATE · </textPath></text>
-          </svg>
-          <span class="badge-core"><svg class="ico"><use href="#i-house"/></svg></span>
-        </div>
-      </div>
-
-      <div class="about-body">
-        <p class="about-lead" data-reveal>自 2014 年起，绘锦只做一件事：把真正值得居住的空间，交到真正懂它的人手中。我们以建筑学视角审视每一处房源，用数据与审美共同判断价值。</p>
-
-        <div class="about-collage">
-          <figure class="collage-item collage-item--tall" data-reveal data-delay="60">
-            <img src="assets/img/collage-living.webp" alt="明亮通透的现代客厅" loading="lazy">
-            <figcaption>自然采光</figcaption>
-          </figure>
-          <figure class="collage-item" data-reveal data-delay="140">
-            <img src="assets/img/collage-bed.webp" alt="温润质感的卧室空间" loading="lazy">
-            <figcaption>休憩尺度</figcaption>
-          </figure>
-          <figure class="collage-item" data-reveal data-delay="220">
-            <img src="assets/img/collage-empty.webp" alt="阳光洒落的留白房间" loading="lazy">
-            <figcaption>留白可能</figcaption>
-          </figure>
-        </div>
-
-        <div class="about-foot" data-reveal>
-          <p>从看房、议价到交付与入住，一位专属顾问，贯穿始终。</p>
-          <a class="btn btn--crimson" href="#spaces" data-magnetic>
-            <span>探索品牌概览</span>
-            <svg class="ico"><use href="#i-arrow"/></svg>
-          </a>
-        </div>
+      <div class="about2-body">
+        <p class="about2-en" data-reveal>ABOUT HUIJIN</p>
+        <h2 class="about2-title" data-reveal data-delay="60">关于我们</h2>
+        <p class="about2-text" data-reveal data-delay="120">北京绘锦房地产经纪有限公司成立于 2021 年 11 月，注册于北京市石景山区，以房地产经纪与房地产咨询为核心业务。我们以建筑学视角审视每一处房源，用数据与审美共同判断价值；从看房、议价到交付与入住，由同一位专属顾问贯穿始终。</p>
+        <a class="about2-link" href="about.html" data-magnetic data-reveal data-delay="180">
+          <span>查看详情</span>
+          <svg class="ico"><use href="#i-arrow"/></svg>
+        </a>
       </div>
     </div>
+
+    <ul class="about2-stats" data-reveal data-delay="120">
+      <li class="about2-stat">
+        <strong class="about2-num">2021<em>年</em></strong>
+        <span>成立年份</span>
+      </li>
+      <li class="about2-stat">
+        <strong class="about2-num">895<em>+</em></strong>
+        <span>精选房源</span>
+      </li>
+      <li class="about2-stat">
+        <strong class="about2-num">4<em>座</em></strong>
+        <span>服务城市</span>
+      </li>
+      <li class="about2-stat">
+        <strong class="about2-num">4<em>位</em></strong>
+        <span>专业顾问</span>
+      </li>
+      <li class="about2-stat">
+        <strong class="about2-num">5<em>区</em></strong>
+        <span>覆盖城区</span>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -958,6 +944,6 @@
   </div>
 </div>
 
-<script src="assets/js/main.js?v=5" defer></script>
+<script src="assets/js/main.js?v=7" defer></script>
 </body>
 </html>

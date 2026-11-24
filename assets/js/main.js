@@ -157,6 +157,29 @@
     });
   });
 
+  /* ───────── 卡片 3D 悬停倾斜 ───────── */
+  const tiltEls = $$('[data-tilt]');
+  if (tiltEls.length && !isTouch && !reduceMotion.matches) {
+    const MAX_TILT = 7;
+    tiltEls.forEach((el) => {
+      el.addEventListener('pointermove', (e) => {
+        const r = el.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        el.style.setProperty('--tilt-x', `${(-py * MAX_TILT).toFixed(2)}deg`);
+        el.style.setProperty('--tilt-y', `${(px * MAX_TILT).toFixed(2)}deg`);
+        el.style.setProperty('--glare-x', `${((px + 0.5) * 100).toFixed(1)}%`);
+        el.style.setProperty('--glare-y', `${((py + 0.5) * 100).toFixed(1)}%`);
+        el.classList.add('is-tilting');
+      }, { passive: true });
+      el.addEventListener('pointerleave', () => {
+        el.classList.remove('is-tilting');
+        el.style.setProperty('--tilt-x', '0deg');
+        el.style.setProperty('--tilt-y', '0deg');
+      });
+    });
+  }
+
   /* ───────── 移动端菜单 ───────── */
   const navToggle = $('#navToggle');
   const navLinks = $('#navLinks');
