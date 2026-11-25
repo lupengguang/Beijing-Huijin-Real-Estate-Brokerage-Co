@@ -777,6 +777,14 @@
 }
 .detail-block .profile-list{margin-top:20px}
 .detail-note{margin-top:14px;font-size:11.5px;line-height:1.9;color:var(--ink-faint)}
+.detail-quote{
+  margin-top:18px;padding:clamp(18px,2vw,26px);
+  border-left:2px solid var(--crimson);
+  background:linear-gradient(120deg,rgba(168,22,43,.05),rgba(255,255,255,.62));
+  border-radius:0 16px 16px 0;
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(14px,1.5vw,17px);line-height:2;color:var(--ink-2);
+}
 .detail-tel{color:var(--crimson);font-family:"Manrope",sans-serif;letter-spacing:.02em}
 .detail-tel:hover{text-decoration:underline;text-underline-offset:3px}
 
