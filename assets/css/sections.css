@@ -1183,3 +1183,91 @@
   .post-hero{padding-top:clamp(60px,14vw,100px)}
   .post-cover{aspect-ratio:16/10}
 }
+
+/* ═══════════════════════════════════════════════
+   帮助中心 help.html
+   ═══════════════════════════════════════════════ */
+.help-hero .container{padding-top:clamp(80px,12vw,160px)}
+.help-search{display:flex;align-items:center;gap:10px;margin-top:32px;max-width:560px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px 12px 8px 18px;box-shadow:0 4px 24px -16px rgba(22,15,12,.18)}
+.help-search .ico{width:18px;height:18px;color:var(--ink-faint);flex-shrink:0}
+.help-search input{flex:1;border:none;outline:none;font-size:14px;padding:8px 0;background:transparent;letter-spacing:.01em;font-family:var(--font-sc);color:var(--ink)}
+.help-search input::placeholder{color:var(--ink-faint)}
+
+.help-section-title{font-size:clamp(22px,2.6vw,36px);font-weight:500;line-height:1.3;margin-top:14px;letter-spacing:-.01em}
+.help-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(28px,4vw,56px)}
+.help-categories,.help-section,.help-contact{padding:clamp(56px,8vw,120px) 0}
+.help-section--alt{background:var(--cream);margin-top:clamp(30px,5vw,80px);margin-bottom:clamp(30px,5vw,80px)}
+
+/* 快捷入口卡片网格 */
+.help-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.2vw,26px)}
+.help-card{position:relative;display:flex;flex-direction:column;padding:clamp(22px,2.8vw,34px);background:#fff;border:1px solid var(--line);border-radius:18px;text-decoration:none;color:var(--ink);transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease)}
+.help-card:hover{transform:translateY(-4px);box-shadow:0 20px 48px -28px rgba(22,15,12,.22);border-color:rgba(176,27,46,.35)}
+.help-card-icon{width:48px;height:48px;border-radius:12px;background:var(--cream);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--crimson)}
+.help-card-icon .ico{width:22px;height:22px}
+.help-card h3{font-size:clamp(14px,1.2vw,17px);font-weight:600;line-height:1.35}
+.help-card p{font-size:12px;line-height:1.85;color:var(--ink-soft);margin-top:8px}
+.help-card-arrow{position:absolute;top:22px;right:22px;width:32px;height:32px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateX(-8px);transition:opacity .4s var(--ease),transform .4s var(--ease),background .3s var(--ease)}
+.help-card-arrow .ico{width:14px;height:14px;color:var(--crimson)}
+.help-card:hover .help-card-arrow{opacity:1;transform:translateX(0);background:var(--crimson)}
+.help-card:hover .help-card-arrow .ico{color:#fff}
+
+/* 贷款卡片 */
+.loan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,32px)}
+.loan-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(22px,2.8vw,34px);transition:border-color .3s}
+.loan-card:hover{border-color:rgba(176,27,46,.4)}
+.loan-card h3{font-size:clamp(16px,1.5vw,20px);font-weight:500;margin-bottom:10px;color:var(--crimson)}
+.loan-card > p{font-size:13px;line-height:1.85;color:var(--ink-soft)}
+.loan-facts{list-style:none;margin:16px 0 0;padding:0}
+.loan-facts li{display:flex;justify-content:space-between;font-size:13px;padding:8px 0;border-top:1px dashed rgba(22,15,12,.08)}
+.loan-facts li:first-child{border-top:none}
+.loan-facts li span:last-child{color:var(--ink-faint);letter-spacing:.02em}
+
+/* 过户步骤 */
+.transfer-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.4vw,30px)}
+.transfer-steps li{display:grid;grid-template-columns:auto 1fr;gap:20px;background:#fff;border-radius:16px;padding:clamp(20px,2.4vw,28px);border:1px solid var(--line);transition:border-color .3s}
+.transfer-steps li:hover{border-color:rgba(176,27,46,.4)}
+.step-num{font-family:var(--font-en);font-weight:700;font-size:34px;color:var(--crimson);opacity:.55;line-height:1}
+.transfer-steps h4{font-size:clamp(14px,1.2vw,17px);font-weight:500;margin-bottom:4px}
+.transfer-steps p{font-size:12.5px;line-height:1.8;color:var(--ink-soft)}
+
+/* 费用表格 */
+.fee-table{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.fee-row{display:grid;grid-template-columns:1.4fr 1fr .8fr 2fr;padding:clamp(14px,1.6vw,20px) clamp(16px,2vw,28px);font-size:13px;border-bottom:1px solid rgba(22,15,12,.06);align-items:center;gap:16px}
+.fee-row:last-child{border-bottom:none}
+.fee-row--head{background:var(--ink);color:#fff;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.fee-row--head span{color:#fff}
+.fee-item{font-weight:500}
+.fee-rate{color:var(--crimson);font-weight:600;font-family:var(--font-en)}
+.fee-party{color:var(--ink-faint)}
+.fee-note{color:var(--ink-soft);line-height:1.7}
+
+/* 联系我们 */
+.help-contact h2{text-align:center;margin-bottom:clamp(28px,4vw,48px)}
+.help-contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,28px)}
+.contact-card{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(22px,2.8vw,34px);text-align:center;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s;background:none}
+.contact-card:hover{transform:translateY(-4px);border-color:rgba(176,27,46,.4);box-shadow:0 16px 40px -24px rgba(22,15,12,.2)}
+.contact-card .help-card-icon{margin-bottom:14px}
+.contact-card h3{font-size:clamp(14px,1.3vw,17px);font-weight:600;margin-bottom:4px}
+.contact-card p{font-size:clamp(15px,1.4vw,19px);font-weight:500;color:var(--crimson);margin-bottom:6px}
+.contact-meta{font-size:11.5px;color:var(--ink-faint);letter-spacing:.01em}
+.contact-card--action{cursor:pointer}
+
+/* 帮助中心响应式 */
+@media (max-width:1100px){
+  .help-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:860px){
+  .help-grid{grid-template-columns:repeat(2,1fr)}
+  .loan-grid{grid-template-columns:1fr}
+  .transfer-steps{grid-template-columns:1fr}
+  .help-contact-grid{grid-template-columns:1fr}
+  .help-section-head{flex-direction:column;align-items:flex-start;gap:14px}
+}
+@media (max-width:520px){
+  .help-grid{grid-template-columns:1fr}
+  .fee-row{grid-template-columns:1fr 1fr;gap:8px}
+  .fee-note{grid-column:1/-1;font-size:12px}
+  .fee-party{grid-column:1/-1}
+  .help-search{flex-wrap:wrap;padding:10px}
+  .help-search .btn{flex-basis:100%;justify-content:center}
+}
