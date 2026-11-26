@@ -267,7 +267,13 @@
 .footer-cta p{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:5px}
 
 .footer-grid{display:grid;grid-template-columns:1.55fr .78fr .78fr .7fr 1.1fr;gap:clamp(18px,2.4vw,40px)}
-.brand--footer .brand-mark{width:40px;height:40px;box-shadow:0 12px 26px -12px rgba(201,38,57,.9),inset 0 1px 0 rgba(255,255,255,.3)}
+.brand--footer .brand-mark{
+  width:40px;height:40px;border-radius:11px;
+  background-color:#F6F2EA;
+  background-image:url("../img/logo-mark.png");
+  background-repeat:no-repeat;background-position:center;background-size:30px 30px;
+  box-shadow:none;
+}
 .brand--footer .brand-type strong{color:#fff}
 .brand--footer .brand-type em{color:rgba(255,255,255,.38)}
 .footer-desc{margin-top:18px;max-width:300px;font-size:12.5px;line-height:1.95;color:rgba(255,255,255,.48)}

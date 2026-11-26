@@ -84,8 +84,14 @@ section[id],footer[id]{scroll-margin-top:104px}
 }
 .is-loaded .loader{opacity:0;visibility:hidden}
 .loader-inner{display:flex;flex-direction:column;align-items:center;gap:18px}
-.loader-mark{width:52px;height:52px;color:var(--crimson-bright);animation:loaderPulse 1.6s ease-in-out infinite}
-.loader-mark svg{width:100%;height:100%}
+.loader-mark{
+  width:52px;height:52px;border-radius:14px;
+  background-color:#F6F2EA;
+  background-image:url("../img/logo-mark.png");
+  background-repeat:no-repeat;background-position:center;background-size:38px 38px;
+  animation:loaderPulse 1.6s ease-in-out infinite;
+}
+.loader-mark svg{width:100%;height:100%;opacity:0}
 .loader-word{font-size:10px;letter-spacing:.42em;color:rgba(255,255,255,.6);text-transform:uppercase}
 .loader-bar{width:180px;height:1px;background:rgba(255,255,255,.14);overflow:hidden}
 .loader-bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--crimson),var(--ember));animation:loaderBar 1.2s var(--ease) forwards}
@@ -234,14 +240,13 @@ p{color:var(--ink-soft)}
 
 .brand{display:inline-flex;align-items:center;gap:11px;flex:none}
 .brand-mark{
-  width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
-  color:#fff;
-  background:linear-gradient(145deg,var(--crimson-bright),var(--crimson-deep));
-  box-shadow:0 10px 20px -10px rgba(140,16,32,.8),inset 0 1px 0 rgba(255,255,255,.35);
-  transition:transform .6s var(--ease),box-shadow .6s;
+  width:40px;height:40px;border-radius:0;display:grid;place-items:center;
+  background:url("../img/logo-mark.png") center/contain no-repeat;
+  box-shadow:none;
+  transition:transform .6s var(--ease);
 }
-.brand-mark svg{width:24px;height:24px}
-.brand:hover .brand-mark{transform:rotate(-6deg) scale(1.04);box-shadow:0 16px 26px -12px rgba(140,16,32,.9)}
+.brand-mark svg{width:24px;height:24px;opacity:0}
+.brand:hover .brand-mark{transform:scale(1.06)}
 .brand-type{display:flex;flex-direction:column;line-height:1}
 .brand-type strong{font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:.14em;color:var(--ink)}
 .brand-type em{font-style:normal;font-size:7.5px;letter-spacing:.3em;color:var(--ink-faint);margin-top:6px;font-weight:600}
@@ -724,8 +729,14 @@ p{color:var(--ink-soft)}
 .veil-in .page-veil{transform:translateY(0);visibility:visible;pointer-events:auto;transition:none}
 .veil-in.veil-out .page-veil{transform:translateY(-102%);transition:transform .82s var(--ease-soft)}
 .page-veil-inner{display:flex;flex-direction:column;align-items:center;gap:16px}
-.page-veil-mark{width:46px;height:46px;color:var(--crimson-bright);animation:veilPulse 1.5s ease-in-out infinite}
-.page-veil-mark svg{width:100%;height:100%}
+.page-veil-mark{
+  width:46px;height:46px;border-radius:13px;
+  background-color:#F6F2EA;
+  background-image:url("../img/logo-mark.png");
+  background-repeat:no-repeat;background-position:center;background-size:34px 34px;
+  animation:veilPulse 1.5s ease-in-out infinite;
+}
+.page-veil-mark svg{width:100%;height:100%;opacity:0}
 .page-veil-word{font-size:9.5px;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 @keyframes veilPulse{0%,100%{opacity:.55;transform:scale(.94)}50%{opacity:1;transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){
