@@ -2,3 +2,5 @@
 .brand-mark{background:url('/Beijing-Huijin-Real-Estate-Brokerage-Co/images/logo-mark.png') center/contain no-repeat;box-shadow:none;border-radius:0;width:40px;height:40px}.brand-mark svg{opacity:0}.brand:hover .brand-mark{transform:scale(1.06);box-shadow:none}.brand--footer .brand-mark{background-color:#F6F2EA;background-image:url('/Beijing-Huijin-Real-Estate-Brokerage-Co/images/logo-mark.png');background-repeat:no-repeat;background-position:center;background-size:30px 30px;border-radius:11px;box-shadow:none}
 
 .loader-mark{background-color:#F6F2EA;background-image:url('/Beijing-Huijin-Real-Estate-Brokerage-Co/images/logo-mark.png');background-repeat:no-repeat;background-position:center;background-size:38px 38px;border-radius:14px}.loader-mark svg{opacity:0}.page-veil-mark{background-color:#F6F2EA;background-image:url('/Beijing-Huijin-Real-Estate-Brokerage-Co/images/logo-mark.png');background-repeat:no-repeat;background-position:center;background-size:34px 34px;border-radius:13px}.page-veil-mark svg{opacity:0}
+
+section.team#team{display:none!important}
