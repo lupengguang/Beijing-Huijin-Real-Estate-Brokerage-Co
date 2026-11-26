@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>房源｜北京绘锦房地产经纪有限公司</title>
-<meta name="description" content="北京绘锦房地产经纪有限公司房源总览：二手房、租房、新房三类房源入口，每套完成产权核查与实勘核验。">
+<meta name="description" content="北京绘锦房地产经纪有限公司房源总览：二手房、租房、新房合并为同一份房源清单，每套完成产权核查与实勘核验。">
 <meta name="theme-color" content="#0E0A09">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +60,7 @@
 <!-- ══════════ 顶部导航 ══════════ -->
 <header class="site-header" id="siteHeader">
   <div class="nav-shell">
-    <a class="brand" href="index.html" aria-label="绘锦地产 首页">
+    <a class="brand" href="/" aria-label="绘锦地产 首页">
       <span class="brand-mark">
         <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 34 32 21l14 13v14H18z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M28 48V36h8v12" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg>
       </span>
@@ -75,13 +75,13 @@
     </button>
 
     <nav class="nav-links" id="navLinks" aria-label="主导航">
-      <a href="index.html"><span>首页</span></a>
-      <a href="fangyuan.html" class="is-active" aria-current="page"><span>房源</span></a>
-      <a href="index.html#cities"><span>小区</span></a>
-      <a href="index.html#team"><span>经纪人</span></a>
-      <a href="index.html#blog"><span>资讯</span></a>
-      <a href="about.html"><span>关于我们</span></a>
-      <a href="index.html#contact"><span>联系我们</span></a>
+      <a href="/"><span>首页</span></a>
+      <a href="/fangyuan.html" class="is-active" aria-current="page"><span>房源</span></a>
+      <a href="/#cities"><span>小区</span></a>
+      <a href="/agents/"><span>经纪人</span></a>
+      <a href="/news/"><span>资讯</span></a>
+      <a href="/about.html"><span>关于我们</span></a>
+      <a href="/#contact"><span>联系我们</span></a>
       <a href="#" data-open-booking><span>登录</span></a>
     </nav>
 
@@ -116,11 +116,11 @@
     <p class="eyebrow eyebrow--light"><span class="eyebrow-line"></span>房源 · LISTINGS</p>
 
     <h1 class="about-hero-title">
-      <span class="line"><span>二手房、租房、新房</span></span>
+      <span class="line"><span>全部房源</span></span>
       <span class="line"><span>一次看清。</span></span>
     </h1>
 
-    <p class="about-hero-text">从成熟社区的二手房，到拎包入住的租赁房源，再到一手在售新盘，绘锦把三类房源放在同一处。每套房源完成产权核查与实勘实拍，价格、面积与产权信息逐项列明。</p>
+    <p class="about-hero-text">二手房、租房与新房合并为同一份房源清单，不再分栏浏览。每套房源完成产权核查与实勘实拍，价格、面积与产权信息逐项列明。</p>
 
     <dl class="about-hero-facts">
       <div>
@@ -148,50 +148,453 @@
   </div>
 </section>
 
-<!-- ══════════ 房源分类 ══════════ -->
+<!-- ══════════ 全部房源 ══════════ -->
 <section class="section cat-section" id="categories">
   <div class="container">
     <div class="prop-head">
       <div>
-        <p class="eyebrow" data-reveal>房源分类</p>
-        <h2 class="display" data-reveal data-delay="80">三种居住答案，<br>各自从容。</h2>
+        <p class="eyebrow" data-reveal>全部房源</p>
+        <h2 class="display" data-reveal data-delay="80">逐套实勘，<br>随时可约。</h2>
       </div>
-      <p class="cities-note" data-reveal data-delay="140">按交易方式分为二手房、租房与新房三类。点击任一分类，进入对应的房源列表页，查看在售价格、户型与顾问信息。</p>
+      <p class="cities-note" data-reveal data-delay="140">二手房、租房与新房合并为同一份房源清单，每套均完成产权核查与实勘实拍。向下浏览全部 12 套，或直接联系顾问安排看房。</p>
     </div>
 
     <div class="cat-grid">
-      <a data-tilt class="cat-card" href="ershoufang.html" data-reveal>
-        <img src="assets/img/prop-1.webp" alt="黄昏中的现代海景别墅外观" loading="lazy">
+      <a data-tilt class="cat-card" href="#listings" data-reveal style="grid-column:1 / -1;aspect-ratio:16/6.2">
+        <img src="assets/img/hero-villa.webp" alt="绘锦在售房源总览" loading="lazy">
         <span class="cat-shade" aria-hidden="true"></span>
         <div class="cat-info">
-          <span class="cat-index">01 · RESALE</span>
-          <h2>二手房</h2>
-          <p>成熟社区、核心地段与学区资源，每套完成产权核查与实勘实拍。</p>
-          <span class="cat-more">查看二手房 <svg class="ico"><use href="#i-arrow-up"/></svg></span>
+          <span class="cat-index">ALL · PROPERTIES</span>
+          <h2>全部房源</h2>
+          <p>二手房、租房与新房一页浏览，共 12 套精选房源，价格、户型与顾问信息齐全。</p>
+          <span class="cat-more">查看全部房源 <svg class="ico"><use href="#i-arrow-up"/></svg></span>
         </div>
       </a>
+    </div>
+  </div>
+</section>
 
-      <a data-tilt class="cat-card" href="zufang.html" data-reveal data-delay="90">
-        <img src="assets/img/space-living.webp" alt="自然采光的现代客厅" loading="lazy">
-        <span class="cat-shade" aria-hidden="true"></span>
-        <div class="cat-info">
-          <span class="cat-index">02 · RENTAL</span>
-          <h2>租房</h2>
-          <p>整租与合租并行，覆盖通勤便利的成熟片区，租约条款清晰可查。</p>
-          <span class="cat-more">查看租房 <svg class="ico"><use href="#i-arrow-up"/></svg></span>
-        </div>
-      </a>
+<!-- ══════════ 房源列表 ══════════ -->
+<section class="section list-section" id="listings">
+  <div class="container">
+    <div class="list-bar">
+      <p class="list-count">共 <strong>12</strong> 套精选房源</p>
+      <a class="btn btn--sm btn--ghost" href="/search/"><span>搜索房源</span></a>
+      <a class="btn btn--sm btn--ghost" href="/map/"><span>地图找房</span><svg class="ico"><use href="#i-arrow-up"/></svg></a>
+    </div>
 
-      <a data-tilt class="cat-card" href="xinfang.html" data-reveal data-delay="180">
-        <img src="assets/img/city-1.webp" alt="城市中的现代住宅建筑立面" loading="lazy">
-        <span class="cat-shade" aria-hidden="true"></span>
-        <div class="cat-info">
-          <span class="cat-index">03 · NEW HOME</span>
-          <h2>新房</h2>
-          <p>合作在售新盘，涵盖城市公寓、低密洋房与湖景别墅，一手价格透明。</p>
-          <span class="cat-more">查看新房 <svg class="ico"><use href="#i-arrow-up"/></svg></span>
+    <div class="prop-grid">
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/prop-1.webp" alt="海景别墅外观，弧形立面与无边泳池" loading="lazy">
+          <span class="prop-badge">在售</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>海景别墅 S078</h3>
+            <span>现代奢华宅邸</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市朝阳区亮马桥路 88 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>4 室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>3 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>1920 平方英尺</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>售价</span>
+              <strong>¥1,798<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>预约看房 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-1.webp" alt="销售顾问 沈墨" loading="lazy">
+            <div>
+              <strong>沈墨</strong>
+              <span>销售顾问</span>
+            </div>
+          </div>
         </div>
-      </a>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/prop-2.webp" alt="现代宅邸外观，深色木饰面与暖光" loading="lazy">
+          <span class="prop-badge">在售</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>现代宅邸 S142</h3>
+            <span>城市臻品</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市海淀区万柳书院 12 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>5 室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>4 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>2260 平方英尺</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>售价</span>
+              <strong>¥3,358<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>预约看房 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-2.webp" alt="销售顾问 苏晚" loading="lazy">
+            <div>
+              <strong>苏晚</strong>
+              <span>销售顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/hero-3.webp" alt="湖畔现代别墅的黄昏倒影" loading="lazy">
+          <span class="prop-badge">在售</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>湖畔别院 L206</h3>
+            <span>湖景独栋</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市顺义区罗马湖畔 6 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>6 室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>5 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>2860 平方英尺</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>售价</span>
+              <strong>¥4,860<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>预约看房 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-1.webp" alt="销售顾问 沈墨" loading="lazy">
+            <div>
+              <strong>沈墨</strong>
+              <span>销售顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/hero-2.webp" alt="山坡上的清水混凝土别墅与无边泳池" loading="lazy">
+          <span class="prop-badge">在售</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>山坡墅居 H091</h3>
+            <span>清水混凝土</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市门头沟区潭柘寺镇 9 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>4 室</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>4 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>2140 平方英尺</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>售价</span>
+              <strong>¥2,280<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>预约看房 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-2.webp" alt="销售顾问 苏晚" loading="lazy">
+            <div>
+              <strong>苏晚</strong>
+              <span>销售顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/space-living.webp" alt="自然采光的现代客厅" loading="lazy">
+          <span class="prop-badge">可租</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>亮马桥公寓 R021</h3>
+            <span>一居整租</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市朝阳区亮马桥路 36 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>1 室 1 厅</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>1 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>68 平方米</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>月租</span>
+              <strong>¥9,800<em>/ 月</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>预约看房 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-1.webp" alt="租赁顾问 沈墨" loading="lazy">
+            <div>
+              <strong>沈墨</strong>
+              <span>租赁顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/space-dining.webp" alt="开放式餐厅与厨房空间" loading="lazy">
+          <span class="prop-badge">可租</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>万柳书院两居 R067</h3>
+            <span>精装整租</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市海淀区万柳书院 8 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>2 室 1 厅</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>1 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>96 平方米</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>月租</span>
+              <strong>¥16,500<em>/ 月</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>预约看房 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-2.webp" alt="租赁顾问 苏晚" loading="lazy">
+            <div>
+              <strong>苏晚</strong>
+              <span>租赁顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/space-pool.webp" alt="室内恒温泳池与落地窗" loading="lazy">
+          <span class="prop-badge">可租</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>顺义湖畔洋房 R112</h3>
+            <span>家庭整租</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市顺义区罗马湖畔 18 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>4 室 2 厅</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>3 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>168 平方米</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>月租</span>
+              <strong>¥28,000<em>/ 月</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>预约看房 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-1.webp" alt="租赁顾问 沈墨" loading="lazy">
+            <div>
+              <strong>沈墨</strong>
+              <span>租赁顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/space-kitchen.webp" alt="现代厨房与操作台" loading="lazy">
+          <span class="prop-badge">可租</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>潭柘寺合租 R038</h3>
+            <span>朝南主卧 · 合租</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市门头沟区潭柘寺镇 21 号</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>主卧</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>共享 1 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>24 平方米</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>月租</span>
+              <strong>¥4,600<em>/ 月</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>预约看房 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-2.webp" alt="租赁顾问 苏晚" loading="lazy">
+            <div>
+              <strong>苏晚</strong>
+              <span>租赁顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <a class="prop-media-link" href="changanjie.html" aria-label="查看长安街三轨学府洋房详情">
+            <img src="assets/img/city-2.webp" alt="山坡上的当代别墅与泳池" loading="lazy">
+          </a>
+          <span class="prop-badge">在售</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3><a href="changanjie.html">长安街三轨学府洋房</a></h3>
+            <span>长安街 · 学府洋房</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市石景山区石景山路与鲁谷东街交汇</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>3 室 2 厅</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>2 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>128 平方米</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>参考总价</span>
+              <strong>¥820<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="changanjie.html">查看详情 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-1.webp" alt="新房顾问 沈墨" loading="lazy">
+            <div>
+              <strong>沈墨</strong>
+              <span>新房顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <a class="prop-media-link" href="yuexi.html" aria-label="查看长安悦玺详情">
+            <img src="assets/img/长安悦玺/公园里的学府大宅/长安悦玺_楼栋外立面.jpg" alt="长安悦玺楼栋外立面实景" loading="lazy">
+          </a>
+          <span class="prop-badge">在售</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3><a href="yuexi.html">长安悦玺</a></h3>
+            <span>东方学府大宅 · 精装现房</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>西四环主城 · 衙门口城市森林公园旁</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>4 室 2 厅</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>2 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>124 平方米</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>参考总价</span>
+              <strong>¥650<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="yuexi.html">查看详情 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-2.webp" alt="新房顾问 苏晚" loading="lazy">
+            <div>
+              <strong>苏晚</strong>
+              <span>新房顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/city-4.webp" alt="静谧街区的雅致别墅" loading="lazy">
+          <span class="prop-badge">在售</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>罗马湖 · 观澜墅</h3>
+            <span>湖景别墅</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市顺义区罗马湖</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>5 室 4 厅</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>4 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>268 平方米</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>参考总价</span>
+              <strong>¥3,980<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>咨询楼盘 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-1.webp" alt="新房顾问 沈墨" loading="lazy">
+            <div>
+              <strong>沈墨</strong>
+              <span>新房顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prop-card" data-reveal>
+        <figure class="prop-media" data-cursor="view">
+          <img src="assets/img/city-1.webp" alt="黄昏中的现代住宅建筑" loading="lazy">
+          <span class="prop-badge">待开盘</span>
+          <span class="shine"></span>
+        </figure>
+        <div class="prop-info glass glass--light">
+          <div class="prop-title">
+            <h3>潭柘寺 · 山语</h3>
+            <span>山景洋房</span>
+          </div>
+          <p class="prop-address"><svg class="ico"><use href="#i-pin"/></svg>北京市门头沟区潭柘寺镇</p>
+          <ul class="prop-meta">
+            <li><svg class="ico"><use href="#i-bed"/></svg><span>3 室 2 厅</span></li>
+            <li><svg class="ico"><use href="#i-bath"/></svg><span>2 卫</span></li>
+            <li><svg class="ico"><use href="#i-area"/></svg><span>142 平方米</span></li>
+          </ul>
+          <div class="prop-foot">
+            <div class="prop-price">
+              <span>参考总价</span>
+              <strong>¥1,120<em>万</em></strong>
+            </div>
+            <a class="prop-more" href="#" data-open-booking>咨询楼盘 <svg class="ico"><use href="#i-arrow-up"/></svg></a>
+          </div>
+          <div class="prop-agent">
+            <img src="assets/img/client-2.webp" alt="新房顾问 苏晚" loading="lazy">
+            <div>
+              <strong>苏晚</strong>
+              <span>新房顾问</span>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
