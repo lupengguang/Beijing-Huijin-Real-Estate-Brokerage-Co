@@ -6,15 +6,15 @@
 
   const HOUSES = [
     {
-      title: '河石庄园 · 山景别墅（演示）',
+      title: '长安悦玺 · 东方学府大宅',
       status: '在售',
-      district: '朝阳区',
-      specs: ['4室2厅3卫', '268.4 ㎡'],
-      price: '1,798 万',
-      tags: ['近地铁', '带花园', '南北通透'],
-      updated: '2026-03-12',
+      district: '石景山区',
+      specs: ['4室2厅2卫', '124 ㎡'],
+      price: '930 万',
+      tags: ['精装现房', 'LDK通厅', '新中式园林'],
+      updated: '2026-11-27',
       href: PREFIX + '/houses/demo-s078',
-      img: PREFIX + '/images/prop-1.webp'
+      img: PREFIX + '/images/changanyuexi/cyx-cover.jpg'
     },
     {
       title: '云顶宅邸 · 城市臻品（演示）',
