@@ -1123,3 +1123,63 @@
   .home-cards::-webkit-scrollbar{display:none}
   .hcard{flex:0 0 78%;scroll-snap-align:start}
 }
+
+/* ═══════════════════════════════════════════════
+   博客详情页（blog-post）
+   ═══════════════════════════════════════════════ */
+.post-hero{position:relative;padding:clamp(80px,12vw,160px) 0 clamp(40px,6vw,80px);overflow:hidden}
+.post-hero .container{position:relative;z-index:2}
+.post-kicker{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase}
+.post-kicker::before{content:"";width:24px;height:1px;background:var(--crimson)}
+.post-title{font-size:clamp(32px,5.5vw,64px);line-height:1.12;font-weight:500;margin-top:22px;max-width:12ch;letter-spacing:-.01em}
+.post-meta{display:flex;flex-wrap:wrap;gap:18px 28px;margin-top:26px;font-size:12px;color:var(--ink-faint);letter-spacing:.04em}
+.post-meta span{display:inline-flex;align-items:center;gap:8px}
+.post-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ink-faint);opacity:.4}
+.post-hero-bg{position:absolute;inset:0;z-index:1;pointer-events:none}
+.post-hero-bg::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(176,27,46,.12),transparent 55%)}
+.post-hero-bg::after{content:"";position:absolute;inset:auto -10% -40% auto;width:55vw;height:55vw;border-radius:50%;background:radial-gradient(circle at center,rgba(176,27,46,.08),transparent 60%);filter:blur(20px)}
+
+.post-cover{margin-top:clamp(24px,3vw,40px);border-radius:22px;overflow:hidden;aspect-ratio:21/9;background:#E6DFD5}
+.post-cover img{width:100%;height:100%;object-fit:cover;display:block}
+
+.post-body{max-width:720px;margin:clamp(48px,6vw,80px) auto 0}
+.post-body p{font-size:clamp(15px,1.15vw,17px);line-height:1.95;color:var(--ink);margin-bottom:22px;letter-spacing:.01em}
+.post-body h2{font-size:clamp(22px,2.4vw,30px);font-weight:500;line-height:1.35;margin:clamp(40px,5vw,64px) 0 16px;letter-spacing:-.01em}
+.post-body h3{font-size:clamp(17px,1.5vw,21px);font-weight:500;line-height:1.4;margin:clamp(28px,3.5vw,44px) 0 12px;color:var(--crimson)}
+.post-body ul,.post-body ol{margin:0 0 22px;padding-left:0;list-style:none}
+.post-body ul li,.post-body ol li{position:relative;padding:8px 0 8px 24px;font-size:clamp(14.5px,1.05vw,16px);line-height:1.85;color:var(--ink)}
+.post-body ul li::before{content:"";position:absolute;left:0;top:18px;width:10px;height:1.5px;background:var(--crimson);opacity:.7}
+.post-body ol{counter-reset:post-ol}
+.post-body ol li{counter-increment:post-ol;padding-left:36px}
+.post-body ol li::before{content:counter(post-ol,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:var(--font-en);font-size:12px;font-weight:700;color:var(--crimson);letter-spacing:.08em}
+.post-body blockquote{border-left:2px solid var(--crimson);padding:6px 0 6px 20px;margin:clamp(24px,3vw,36px) 0;font-size:clamp(15px,1.2vw,18px);line-height:1.9;color:var(--ink-soft);font-style:italic}
+.post-body strong{font-weight:600;color:var(--ink)}
+.post-body .lead{font-size:clamp(16px,1.3vw,19px);color:var(--ink-soft);line-height:2.05}
+.post-body .callout{background:var(--cream);border-radius:14px;padding:clamp(18px,2.2vw,28px);margin:clamp(28px,3.5vw,44px) 0}
+.post-body .callout h4{font-size:13px;letter-spacing:.14em;color:var(--crimson);margin-bottom:10px;font-weight:600;text-transform:uppercase}
+.post-body .callout p{margin:0;color:var(--ink-soft)}
+
+.post-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:clamp(48px,6vw,80px) auto;max-width:280px;color:var(--ink-faint);font-size:10px;letter-spacing:.28em;text-transform:uppercase}
+
+.post-author{display:flex;align-items:center;gap:clamp(14px,1.8vw,20px);padding:clamp(20px,2.4vw,30px) 0;margin-top:clamp(40px,5vw,60px);border-top:1px solid rgba(22,15,12,.08);border-bottom:1px solid rgba(22,15,12,.08)}
+.post-author-avatar{width:52px;height:52px;border-radius:50%;background:var(--crimson);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-en);font-weight:700;font-size:16px;letter-spacing:.04em;flex-shrink:0}
+.post-author-info strong{display:block;font-size:14px;font-weight:600}
+.post-author-info span{font-size:11.5px;color:var(--ink-faint);letter-spacing:.03em}
+
+.post-related{margin-top:clamp(48px,6vw,80px)}
+.post-related-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(24px,3vw,36px)}
+.post-related-head h2{font-size:clamp(26px,3vw,40px);font-weight:500;letter-spacing:-.01em}
+
+.post-nav{display:flex;gap:clamp(12px,1.6vw,20px);margin-bottom:clamp(40px,5vw,60px);max-width:1200px;margin-left:auto;margin-right:auto}
+.post-nav-card{flex:1;background:#fff;border:1px solid rgba(22,15,12,.08);border-radius:16px;padding:clamp(16px,2vw,24px);text-decoration:none;color:var(--ink);transition:border-color .3s,transform .3s,box-shadow .3s}
+.post-nav-card:hover{border-color:var(--crimson);transform:translateY(-2px);box-shadow:0 12px 32px -16px rgba(176,27,46,.25)}
+.post-nav-card .nav-label{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.16em;color:var(--ink-faint);text-transform:uppercase;margin-bottom:8px}
+.post-nav-card.next .nav-label{justify-content:flex-end}
+.post-nav-card h4{font-size:clamp(14px,1.3vw,17px);font-weight:500;line-height:1.4}
+
+/* 响应式 */
+@media (max-width:760px){
+  .post-nav{flex-direction:column}
+  .post-hero{padding-top:clamp(60px,14vw,100px)}
+  .post-cover{aspect-ratio:16/10}
+}
