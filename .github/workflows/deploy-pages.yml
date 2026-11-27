@@ -32,6 +32,10 @@ jobs:
         with:
           path: .
 
+      # 等待 GitHub 完成 artifact 元数据索引，避免 deploy-pages 立即查询时找不到 artifact 而失败
+      - name: Wait for artifact indexing
+        run: sleep 20
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
