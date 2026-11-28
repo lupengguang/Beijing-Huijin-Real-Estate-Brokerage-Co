@@ -17,15 +17,17 @@
       img: PREFIX + '/images/changanyuexi/cyx-cover.jpg'
     },
     {
-      title: '云顶宅邸 · 城市臻品（演示）',
-      status: '已预订',
-      district: '海淀区',
-      specs: ['5室2厅4卫', '210.2 ㎡'],
-      price: '3,358 万',
-      tags: ['学区房', '精装修', '高层'],
-      updated: '2026-03-10',
+      title: '长安一号 · 东南角写字楼',
+      status: '在租',
+      district: '门头沟区',
+      specs: ['写字楼', '266 ㎡'],
+      priceCaption: '报价',
+      price: '2.5 元/㎡',
+      tags: ['长安天街旁', '东南角', '看房有钥匙'],
+      updated: '2026-11-28',
+      demo: false,
       href: PREFIX + '/houses/demo-s142',
-      img: PREFIX + '/images/prop-2.webp'
+      img: PREFIX + '/images/changanyihao/cy1-cover.jpg'
     },
     {
       title: '湖畔别院 · 无边泳池（演示）',
@@ -75,6 +77,7 @@
 
   const STATUS_CLASS = {
     '在售': 'is-on',
+    '在租': 'is-on',
     '已预订': 'is-booked',
     '已成交': 'is-sold',
     '已出租': 'is-rented',
@@ -86,14 +89,14 @@
         <a class="hsix-media" href="${h.href}" aria-label="查看${h.title}详情">
           <img src="${h.img}" alt="${h.title} 房源图片" loading="lazy" decoding="async">
           <span class="hsix-status ${STATUS_CLASS[h.status] || ''}">${h.status}</span>
-          <span class="hsix-demo">演示数据</span>
+          ${h.demo === false ? '' : '<span class="hsix-demo">演示数据</span>'}
         </a>
         <div class="hsix-body">
           <h3 class="hsix-title"><a href="${h.href}">${h.title}</a></h3>
           <span class="hsix-district">${h.district}</span>
           <ul class="hsix-meta">${h.specs.map((s) => `<li>${s}</li>`).join('')}</ul>
           <div class="hsix-foot">
-            <div class="hsix-price"><span>总价</span><strong>${h.price}</strong></div>
+            <div class="hsix-price"><span>${h.priceCaption || '总价'}</span><strong>${h.price}</strong></div>
             <a class="hsix-more" href="${h.href}">查看详情 ↗</a>
           </div>
           <ul class="hsix-tags">${h.tags.map((t) => `<li>${t}</li>`).join('')}</ul>
