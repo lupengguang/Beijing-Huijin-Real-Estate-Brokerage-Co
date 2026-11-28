@@ -13,6 +13,7 @@
       price: '930 万',
       tags: ['精装现房', 'LDK通厅', '新中式园林'],
       updated: '2026-11-27',
+      demo: false,
       href: PREFIX + '/houses/demo-s078',
       img: PREFIX + '/images/changanyuexi/cyx-cover.jpg'
     },
@@ -30,15 +31,17 @@
       img: PREFIX + '/images/changanyihao/cy1-cover.jpg'
     },
     {
-      title: '湖畔别院 · 无边泳池（演示）',
-      status: '已成交',
-      district: '顺义区',
-      specs: ['6室3厅5卫', '312.8 ㎡'],
-      price: '4,260 万',
-      tags: ['湖景', '独栋', '私家泳池'],
-      updated: '2026-02-28',
+      title: '古城长安中心 · 东向商铺',
+      status: '在租',
+      district: '石景山区',
+      specs: ['商铺', '98 ㎡'],
+      priceCaption: '月租',
+      price: '1 万元/月',
+      tags: ['东向', '可做饭店', '可做会所', '看房有密码'],
+      updated: '2026-11-28',
+      demo: false,
       href: PREFIX + '/houses/demo-s205',
-      img: PREFIX + '/images/hero-3.webp'
+      img: PREFIX + '/images/guchengchangan/shop-cover.jpg'
     },
     {
       title: '城市公寓 · 精装两居（演示）',
